@@ -3,10 +3,10 @@ os: linux
 image: timeoff
 files:
   - source: /
-    destination: /var/www/
+    destination: /app/
     overwrite: true
 permissions: 
-  - object: /var/www/
+  - object: /app/
     pattern: "*.sh"
     owner: root
     group: root
@@ -15,7 +15,7 @@ permissions:
      - file
 hooks:
   ApplicationStart:
-    -location: /var/www/deploy.sh timeoff:latest
+    -location: /app/deploy.sh timeoff:latest
     timeout: 120
 
 
