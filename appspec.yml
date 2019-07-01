@@ -3,7 +3,7 @@ os: linux
 image: alpine_timeoff
 files:
   - source:
-    - appsec.yml
+    - appspec.yml
     - deploy.sh
     - Dockerfile
     destination: /var/www/
