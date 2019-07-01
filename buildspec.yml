@@ -30,4 +30,4 @@ phases:
       - chmod +x deploy.sh
 artifacts:
   files:
-    - /deploy.sh
+    - deploy.sh
