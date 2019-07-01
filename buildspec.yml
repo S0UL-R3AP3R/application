@@ -1,0 +1,28 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      docker: 18
+    commands:
+      - apt-get update -y
+      - apt install -y nodejs
+      - node --version
+  pre_build:
+    commands:
+      - echo "Entered the pre-build phase"
+      - echo "Running App"
+      - npm install
+      - npm start
+  build:
+    commands:
+      - echo "Entered build phase"
+      - echo "Building Docker Image"
+      - docker build --rm -t timeoff:latest --no-cache .
+  post_build:
+    commands:
+      - echo "Entered the post-build phase"
+      - echo "Running Docker Image"
+      - docker run -t -i -d -p 3000:3000 --name alpine_timeoff timeoff
+artifacts:
+  files:
+    - ./**/*
