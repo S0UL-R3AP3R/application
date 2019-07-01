@@ -1,11 +1,8 @@
 version: 0.0
 os: linux
-image: alpine_timeoff
+image: timeoff
 files:
-  - source:
-    - appspec.yml
-    - deploy.sh
-    - Dockerfile
+  - source: /
     destination: /var/www/
     overwrite: true
 permissions: 

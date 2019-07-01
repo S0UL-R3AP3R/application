@@ -30,7 +30,9 @@ phases:
       - chmod +x deploy.sh
 artifacts:
   files:
-    - appsec.yml
+    #- /**/*
+    - appspec.yml
     - deploy.sh
     - Dockerfile
-  image: alpine_timeoff
+    - Dockerrun.aws.json
+  image: timeoff
