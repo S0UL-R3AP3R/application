@@ -5,10 +5,11 @@ phases:
       docker: 18
     commands:
       - apt-get update -y
-      - apt install -y nodejs-dev node-gyp libssl1.0-dev
-      - node --version
+      - apt install -y nodejs node-gyp libssl1.0-dev
+      - apt install sqlite3
       - apt install -y npm
       - apt install -y python3.7
+      - node --version
   pre_build:
     commands:
       - echo "Entered the pre-build phase"
