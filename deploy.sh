@@ -2,7 +2,7 @@
 
 set -e
 
-DOCKER_IMAGE= "timeoff"
+DOCKER_IMAGE="timeoff"
 CONTAINER_NAME="alpine_timeoff"
 
 # Check for arguments

@@ -16,8 +16,8 @@ phases:
     commands:
       - echo "Entered the pre-build phase"
       - echo "Running App"
-      - rm -rf node_modules
       - npm install -g npm@latest
+      - ncu -ua --timeout 20000 --packageFile package.json
       - npm start
   build:
     commands:
@@ -32,7 +32,7 @@ phases:
       - chmod +x deploy.sh
 artifacts:
   files:
-    #- /**/*
+    #- '**/*'
     #- appspec.yml
     - deploy.sh
     - Dockerfile
