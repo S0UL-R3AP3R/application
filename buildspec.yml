@@ -5,10 +5,11 @@ phases:
       docker: 18
     commands:
       - apt-get update -y
-      - apt install -y nodejs node-gyp libssl1.0-dev
+      - apt-get install build-essential libssl-dev
+      - apt install -y nodejs
       - apt install -y sqlite3
       - apt install -y npm
-      - apt install -y nvm
+      - curl https://raw.githubusercontent.com/creationix/nvm/v0.25.0/install.sh | bash
       #- apt install -y python3.7
       - node --version
   pre_build:
