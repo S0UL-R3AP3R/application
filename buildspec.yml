@@ -16,7 +16,7 @@ phases:
     commands:
       - echo "Entered the pre-build phase"
       - echo "Running App"
-      - npm install
+      - npm install -g npm
       - npm start
   build:
     commands:
@@ -36,4 +36,3 @@ artifacts:
     - deploy.sh
     - Dockerfile
     - Dockerrun.aws.json
-    
