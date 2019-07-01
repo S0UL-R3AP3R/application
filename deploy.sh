@@ -1,8 +1,8 @@
-!/usr/bin/env bash
+!/bin/bash
 
 set -e
 
-DOCKER_IMAGE= "timeoff:latest"
+DOCKER_IMAGE= $1
 CONTAINER_NAME="alpine_timeoff"
 
 # Check for arguments

@@ -15,7 +15,7 @@ permissions:
      - file
 hooks:
   ApplicationStart:
-    -location: /var/www/deploy.sh
+    -location: /var/www/deploy.sh timeoff:latest
     timeout: 120
 
 
