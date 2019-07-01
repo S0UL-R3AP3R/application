@@ -33,4 +33,4 @@ artifacts:
     - appsec.yml
     - deploy.sh
     - Dockerfile
-    - taskdefinition.json
+  image: alpine_timeoff
