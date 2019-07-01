@@ -7,6 +7,8 @@ phases:
       - apt-get update -y
       - apt install -y nodejs
       - node --version
+      - apt install -y npm
+      - apt install -y python3.7
   pre_build:
     commands:
       - echo "Entered the pre-build phase"
@@ -23,6 +25,7 @@ phases:
       - echo "Entered the post-build phase"
       - echo "Running Docker Image"
       - docker run -t -i -d -p 3000:3000 --name alpine_timeoff timeoff
+      - chmod +x deploy.sh
 artifacts:
   files:
-    - ./**/*
+    - /deploy.sh
