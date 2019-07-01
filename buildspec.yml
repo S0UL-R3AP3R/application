@@ -5,19 +5,18 @@ phases:
       docker: 18
     commands:
       - apt-get update -y
-      - apt-get install build-essential libssl-dev
-      - apt install -y nodejs
-      - apt install -y sqlite3
-      - apt install -y npm
-      - curl https://raw.githubusercontent.com/creationix/nvm/v0.25.0/install.sh | bash
+      #- apt install -y nodejs node-gyp libssl1.0-dev
+      #- apt install -y sqlite3
+      #- apt install -y npm
+      #- curl https://raw.githubusercontent.com/creationix/nvm/v0.25.0/install.sh | bash
       #- apt install -y python3.7
-      - node --version
+      #- node --version
   pre_build:
     commands:
       - echo "Entered the pre-build phase"
-      - echo "Running App"
-      - npm install
-      - npm start
+      #- echo "Running App"
+      #- npm install
+      #- npm start
   build:
     commands:
       - echo "Entered build phase"
