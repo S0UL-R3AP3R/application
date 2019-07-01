@@ -30,4 +30,7 @@ phases:
       - chmod +x deploy.sh
 artifacts:
   files:
+    - appsec.yml
     - deploy.sh
+    - Dockerfile
+    - taskdefinition.json
