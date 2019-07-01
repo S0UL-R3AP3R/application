@@ -2,11 +2,11 @@ version: 0.0
 os: linux
 image: timeoff
 files:
-  - source: /
-    destination: /
+  - source: /**/*
+    destination: /app/
     overwrite: true
 permissions: 
-  - object: /
+  - object: /**/*
     pattern: "*.sh"
     owner: root
     group: root
@@ -15,7 +15,7 @@ permissions:
      - file
 hooks:
   ApplicationStart:
-    -location: /deploy.sh timeoff:latest
+    -location: /deploy.sh
     timeout: 120
 
 

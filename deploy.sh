@@ -2,12 +2,12 @@
 
 set -e
 
-DOCKER_IMAGE= $1
+DOCKER_IMAGE= "timeoff:latest"
 CONTAINER_NAME="alpine_timeoff"
 
 # Check for arguments
 if [[ $# -lt 1 ]] ; then
-    echo '[ERROR] You must supply a Docker Image to pull'
+    docker build --rm -t timeoff:latest --no-cache .
     exit 1
 fi
 
