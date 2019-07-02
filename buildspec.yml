@@ -31,5 +31,4 @@ phases:
     #- Dockerfile
     #- appspec.yml
     #- deploy.sh
-    #- Dockerrun.aws.json
 #  discard-paths: yes
