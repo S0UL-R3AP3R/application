@@ -5,7 +5,7 @@ set -e
 DOCKER_IMAGE="timeoff:latest"
 CONTAINER_NAME="alpine_timeoff"
 
-#sudo apt install -y httpd
+sudo apt install -y httpd
 
 # Check for existing image
 if [[ "$(sudo docker images -q $DOCKER_IMAGE 2> /dev/null)" == "" ]]; then
