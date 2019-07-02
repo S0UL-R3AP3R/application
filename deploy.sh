@@ -5,9 +5,6 @@ set -e
 DOCKER_IMAGE="timeoff:latest"
 CONTAINER_NAME="alpine_timeoff"
 
-apt-get install git
-git clone https://github.com/timeoff-management/application.git timeoff-management
-
 # Check for existing image
 if [[ "$(sudo docker images -q $DOCKER_IMAGE 2> /dev/null)" == "" ]]; then
             echo 'Building Image:'
