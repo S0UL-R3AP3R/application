@@ -32,7 +32,7 @@ artifacts:
     #- docker
     #- '**/*'
     #- package.json
-    #- appspec.yml
+    - appspec.yml
     - deploy.sh
     - Dockerfile
     #- Dockerrun.aws.json
