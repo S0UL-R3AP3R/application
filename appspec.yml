@@ -5,7 +5,7 @@ files:
     destination: /app
     overwrite: true
 permissions: 
-  - object: /app
+  - object: /
     pattern: "*.sh"
     owner: root
     group: root
