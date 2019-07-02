@@ -33,6 +33,6 @@ artifacts:
     - '**/*'
     #- package.json
     #- appspec.yml
-    #- deploy.sh
+    - deploy.sh
     #- Dockerfile
     #- Dockerrun.aws.json
