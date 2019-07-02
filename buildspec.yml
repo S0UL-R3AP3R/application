@@ -30,9 +30,9 @@ phases:
 artifacts:
   files:
     #- docker
-    - '**/*'
+    #- '**/*'
     #- package.json
     #- appspec.yml
     - deploy.sh
-    #- Dockerfile
+    - Dockerfile
     #- Dockerrun.aws.json
