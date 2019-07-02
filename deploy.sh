@@ -5,8 +5,8 @@ set -e
 DOCKER_IMAGE="timeoff:latest"
 CONTAINER_NAME="alpine_timeoff"
 
-#sudo docker load -i /my-app-docker.tar.gz
-#sudo apt-get install -y httpd
+apt-get install git
+git clone https://github.com/timeoff-management/application.git timeoff-management
 
 # Check for existing image
 if [[ "$(sudo docker images -q $DOCKER_IMAGE 2> /dev/null)" == "" ]]; then
