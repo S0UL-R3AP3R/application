@@ -2,10 +2,10 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /app/
+    destination: /app
     overwrite: true
 permissions: 
-  - object: /app/
+  - object: /app
     pattern: "*.sh"
     owner: root
     group: root
@@ -15,6 +15,6 @@ permissions:
 hooks:
   ApplicationStart:
     -location: /app/deploy.sh
-    timeout: 120
+    timeout: 300
 
 

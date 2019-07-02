@@ -9,12 +9,12 @@ phases:
       - apt install -y nodejs node-gyp libssl1.0-dev
       - apt install -y sqlite3
       - apt install -y npm
-      #- curl https://raw.githubusercontent.com/creationix/nvm/v0.25.0/install.sh | bash
       - apt install -y python3.7
       - node --version
   pre_build:
     commands:
       - echo "Entered the pre-build phase"
+      - mkdir app
   build:
     commands:
       - echo "Entered build phase"
@@ -27,12 +27,17 @@ phases:
       - echo "Entered the post-build phase"
       - echo "Running Docker Image"
       #- docker run -t -i -d -p 3000:3000 --name alpine_timeoff timeoff
-      - chmod +x deploy.sh
+      - chmod +x deploy.sh > app
+      - appspec.yml > app
+      - Dockerfile > app
 artifacts:
   files:
-    #- '**/*'
-    - package.json
-    - appspec.yml
-    - deploy.sh
-    - Dockerfile
-    - Dockerrun.aws.json
+    #- docker
+    - '**/*'
+    #- package.json
+    #- appspec.yml
+    #- deploy.sh
+    #- Dockerfile
+    #- Dockerrun.aws.json
+  discard-paths: no
+  base-directory: app
