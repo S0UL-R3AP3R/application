@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /app
+    destination: /
     overwrite: true
 permissions: 
   - object: /
@@ -16,3 +16,4 @@ hooks:
   ApplicationStart:
     - location: deploy.sh
       timeout: 300
+      runas: ec2-user
