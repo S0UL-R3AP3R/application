@@ -14,5 +14,5 @@ permissions:
      - file
 hooks:
   ApplicationStart:
-    - location: app/deploy.sh
+    - location: deploy.sh
       timeout: 300
