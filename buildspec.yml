@@ -24,7 +24,7 @@ phases:
   post_build:
     commands:
       - echo "Entered the post-build phase"
-      - echo "Running Docker Image"
+      - docker save / | gzip -c > my-app-docker.tar.gz
       #- docker run -t -i -d -p 3000:3000 --name alpine_timeoff timeoff
       - chmod +x deploy.sh
 artifacts:
@@ -35,4 +35,5 @@ artifacts:
     - appspec.yml
     - deploy.sh
     - Dockerfile
+    - my-app-docker.tar.gz
     #- Dockerrun.aws.json
