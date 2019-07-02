@@ -25,7 +25,7 @@ phases:
     commands:
       - echo "Entered the post-build phase"
       - chmod +x deploy.sh
-      - mkdir /temp
+      - mkdir temp
 artifacts:
   files:
     #- '**/*'
