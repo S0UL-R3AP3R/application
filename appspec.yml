@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 image: timeoff
 files:
-  - source: /**/*
+  - source: '**/*'
     destination: /app/
     overwrite: true
 permissions: 

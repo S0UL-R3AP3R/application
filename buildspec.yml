@@ -15,25 +15,24 @@ phases:
   pre_build:
     commands:
       - echo "Entered the pre-build phase"
-      - echo "Running App"
-      - npm install -g npm@latest
-      - ncu -u --timeout 20000 --packageFile package.json
-      - npm start
   build:
     commands:
       - echo "Entered build phase"
+      - echo "Building App"
+      - npm install -g npm@latest
       - echo "Building Docker Image"
       - docker build --rm -t timeoff:latest --no-cache .
   post_build:
     commands:
       - echo "Entered the post-build phase"
       - echo "Running Docker Image"
-      - docker run -t -i -d -p 3000:3000 --name alpine_timeoff timeoff
+      #- docker run -t -i -d -p 3000:3000 --name alpine_timeoff timeoff
       - chmod +x deploy.sh
 artifacts:
   files:
     #- '**/*'
-    #- appspec.yml
+    - package.json
+    - appspec.yml
     - deploy.sh
     - Dockerfile
     - Dockerrun.aws.json
