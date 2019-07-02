@@ -25,12 +25,11 @@ phases:
     commands:
       - echo "Entered the post-build phase"
       - chmod +x deploy.sh
-      - mkdir temp
 artifacts:
   files:
     #- '**/*'
-    - /temp/Dockerfile
-    - /temp/appspec.yml
-    - /temp/deploy.sh
+    - Dockerfile
+    - appspec.yml
+    - deploy.sh
     #- Dockerrun.aws.json
   discard-paths: yes
