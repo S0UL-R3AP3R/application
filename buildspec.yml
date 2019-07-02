@@ -14,7 +14,6 @@ phases:
   pre_build:
     commands:
       - echo "Entered the pre-build phase"
-      - mkdir app
   build:
     commands:
       - echo "Entered build phase"
@@ -27,9 +26,7 @@ phases:
       - echo "Entered the post-build phase"
       - echo "Running Docker Image"
       #- docker run -t -i -d -p 3000:3000 --name alpine_timeoff timeoff
-      - chmod +x deploy.sh > app/
-      - appspec.yml > app/
-      - Dockerfile > app/
+      - chmod +x deploy.sh
 artifacts:
   files:
     #- docker
@@ -39,5 +36,3 @@ artifacts:
     #- deploy.sh
     #- Dockerfile
     #- Dockerrun.aws.json
-  discard-paths: no
-  base-directory: app
