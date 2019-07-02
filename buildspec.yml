@@ -28,7 +28,7 @@ phases:
 artifacts:
   files:
     - '**/*'
-  discard-paths: yes
+  discard-paths: no
     #- appspec.yml
     #- deploy.sh
     #- Dockerfile

@@ -5,8 +5,6 @@ set -e
 DOCKER_IMAGE="timeoff:latest"
 CONTAINER_NAME="alpine_timeoff"
 
-pwd
-ls -a
 #sudo docker load -i /my-app-docker.tar.gz
 #sudo apt-get install -y httpd
 
